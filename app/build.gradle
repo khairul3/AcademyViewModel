@@ -39,6 +39,7 @@ dependencies {
     //kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:$coreVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
 
     //ui
     implementation "androidx.appcompat:appcompat:$appCompatVersion"

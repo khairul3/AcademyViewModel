@@ -49,7 +49,7 @@ class HomeActivityTest {
     }
 
     @Test
-    fun loadBookmarks() {
+    fun loadBookmark() {
         onView(withText("Bookmark")).perform(click())
         onView(withId(R.id.rv_bookmark)).check(matches(isDisplayed()))
         onView(withId(R.id.rv_bookmark)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(dummyCourse.size))

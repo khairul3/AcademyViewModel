@@ -37,6 +37,7 @@ class BookmarkAdapter(private val callback: BookmarkFragmentCallback) : Recycler
 
     inner class CourseViewHolder(private val binding: ItemsBookmarkBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(course: CourseEntity) {
+
             with(binding) {
                 tvItemTitle.text = course.title
                 tvItemDate.text = itemView.resources.getString(R.string.deadline_date, course.deadline)

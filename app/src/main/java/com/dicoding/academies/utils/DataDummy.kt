@@ -6,11 +6,8 @@ import com.dicoding.academies.data.ModuleEntity
 import java.util.ArrayList
 
 object DataDummy {
-
     fun generateDummyCourses(): ArrayList<CourseEntity> {
-
         val courses = ArrayList<CourseEntity>()
-
         courses.add(CourseEntity("a14",
                 "Menjadi Android Developer Expert",
                 "Dicoding sebagai satu-satunya Google Authorized Training Partner di Indonesia telah melalui proses penyusunan kurikulum secara komprehensif. Semua modul telah diverifikasi langsung oleh Google untuk memastikan bahwa materi yang diajarkan relevan dan sesuai dengan kebutuhan industri digital saat ini. Peserta akan belajar membangun aplikasi Android dengan materi Testing, Debugging, Application, Application UX, Fundamental Application Components, Persistent Data Storage, dan Enhanced System Integration.",
