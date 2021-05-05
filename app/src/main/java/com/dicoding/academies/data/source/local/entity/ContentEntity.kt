@@ -1,4 +1,4 @@
-package com.dicoding.academies.data
+package com.dicoding.academies.data.source.local.entity
 
 data class ContentEntity(
         var content: String?
