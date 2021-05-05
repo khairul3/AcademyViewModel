@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.dicoding.academies.R
-import com.dicoding.academies.data.CourseEntity
+import com.dicoding.academies.data.source.local.entity.CourseEntity
 import com.dicoding.academies.databinding.ItemsBookmarkBinding
 import com.dicoding.academies.ui.detail.DetailCourseActivity
 import java.util.*
@@ -37,7 +37,6 @@ class BookmarkAdapter(private val callback: BookmarkFragmentCallback) : Recycler
 
     inner class CourseViewHolder(private val binding: ItemsBookmarkBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(course: CourseEntity) {
-
             with(binding) {
                 tvItemTitle.text = course.title
                 tvItemDate.text = itemView.resources.getString(R.string.deadline_date, course.deadline)

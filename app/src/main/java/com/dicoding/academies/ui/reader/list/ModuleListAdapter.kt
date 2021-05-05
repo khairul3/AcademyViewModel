@@ -1,12 +1,9 @@
 package com.dicoding.academies.ui.reader.list
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.academies.R
-import com.dicoding.academies.data.ModuleEntity
+import com.dicoding.academies.data.source.local.entity.ModuleEntity
 import com.dicoding.academies.databinding.ItemsModuleListCustomBinding
 import java.util.*
 

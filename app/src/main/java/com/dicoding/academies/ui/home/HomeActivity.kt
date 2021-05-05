@@ -2,9 +2,7 @@ package com.dicoding.academies.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.dicoding.academies.R
 import com.dicoding.academies.databinding.ActivityHomeBinding
-import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
 

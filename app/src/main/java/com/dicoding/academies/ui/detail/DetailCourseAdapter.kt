@@ -1,16 +1,11 @@
 package com.dicoding.academies.ui.detail
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-
-import com.dicoding.academies.R
-import com.dicoding.academies.data.ModuleEntity
+import com.dicoding.academies.data.source.local.entity.ModuleEntity
 import com.dicoding.academies.databinding.ItemsModuleListBinding
-import kotlinx.android.synthetic.main.items_module_list.view.*
-
-import java.util.ArrayList
+import java.util.*
 
 class DetailCourseAdapter : RecyclerView.Adapter<DetailCourseAdapter.ModuleViewHolder>() {
 

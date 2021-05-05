@@ -9,11 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.academies.data.ModuleEntity
+import com.dicoding.academies.data.source.local.entity.ModuleEntity
 import com.dicoding.academies.databinding.FragmentModuleListBinding
 import com.dicoding.academies.ui.reader.CourseReaderActivity
 import com.dicoding.academies.ui.reader.CourseReaderCallback
 import com.dicoding.academies.ui.reader.CourseReaderViewModel
+import com.dicoding.academies.viewmodel.ViewModelFactory
 
 /**
  * A simple [Fragment] subclass.
@@ -28,9 +29,9 @@ class ModuleListFragment : Fragment(), MyAdapterClickListener {
     }
 
     private lateinit var fragmentModuleListBinding: FragmentModuleListBinding
-    private lateinit var viewModel: CourseReaderViewModel
     private lateinit var adapter: ModuleListAdapter
     private lateinit var courseReaderCallback: CourseReaderCallback
+    private lateinit var viewModel: CourseReaderViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -41,7 +42,9 @@ class ModuleListFragment : Fragment(), MyAdapterClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory())[CourseReaderViewModel::class.java]
+
+        val factory = ViewModelFactory.getInstance(requireActivity())
+        viewModel = ViewModelProvider(requireActivity(), factory)[CourseReaderViewModel::class.java]
         adapter = ModuleListAdapter(this)
         populateRecyclerView(viewModel.getModules())
     }
@@ -68,4 +71,3 @@ class ModuleListFragment : Fragment(), MyAdapterClickListener {
         }
     }
 }
-
