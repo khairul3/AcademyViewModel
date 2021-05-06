@@ -49,6 +49,7 @@ class AcademyRepository private constructor(private val remoteDataSource: Remote
         return courseList
     }
 
+
     // Pada metode ini di modul selanjutnya akan mengembalikan kelas POJO baru, gabungan antara course dengan module-nya.
     override fun getCourseWithModules(courseId: String): CourseEntity {
         val courseResponses = remoteDataSource.getAllCourses()
